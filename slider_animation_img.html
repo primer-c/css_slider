@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo of slider</title>
+  <link rel="stylesheet" href="css/slider_animation_img.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="slider">
+      <ul class="slider-imgs">
+        <li v-for="item in lists" class="slider-img">
+          <img :src="item.img" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        lists: [
+          {id: "control-1",img:"imgs/01.jpg"},
+          {id: "control-2",img:"imgs/02.jpg"},
+          {id: "control-3",img:"imgs/03.jpg"},
+          {id: "control-4",img:"imgs/04.jpg"},
+          {id: "control-5",img:"imgs/05.jpg"}
+        ]
+      },
+    })
+  </script>
+</body>
+</html>
